@@ -6,6 +6,7 @@
 </head>
 <body>
   <script>
+    
 
     //Finds a random number between two values (min and max)
     function Random_number(min, max) {
@@ -24,6 +25,36 @@
         } else if (This_Number === 3) {
             return("Scissors");
         } 
+    }
+
+    // Determines the winner of a rock, paper, scissors game and prints the solution
+    function Find_Winner(playerSelection, computerSelection) {
+        if (playerSelection ==== "Rock") {
+            if (computerSelection === "Scissors") {
+                return "You Lose!";
+            } else if (computerSelection === "Paper") {
+                return "You Win!";
+            } else {
+                return "Tie!";
+            }
+        } else if (playerSelection ==== "Paper") {
+            if (computerSelection === "Scissors") {
+                return "You Lose!";
+            } else if (computerSelection === "Rock") {
+                return "You Win!";
+            } else {
+                return("Tie!");
+            }
+        } else {
+            if (computerSelection === "Rock") {
+                return "You Lose!";
+            } else if (computerSelection === "Paper") {
+                return "You Win!";
+            } else {
+                return "Tie!";
+            }
+        }
+            
     }
         
 
