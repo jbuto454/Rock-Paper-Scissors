@@ -1,1 +1,1 @@
-# Javascript_Calculator
+# Javascript_Rock_Paper_Scissors
