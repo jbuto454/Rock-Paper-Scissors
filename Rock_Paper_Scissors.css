@@ -2,6 +2,8 @@
 .head {
     display: flex;
     justify-content: center;
+    font-family: Chalkduster, fantasy;
+    font-size: 50px;
 }
 
 .button {
@@ -9,6 +11,11 @@
     width: 33%; 
     display: flex;
     justify-content: space-evenly;
+    height: 100px;
+}
+
+.btnStyle {
+    border-radius: 20px;
 }
 
 .scores {
@@ -40,3 +47,5 @@
     display: flex;
     justify-content: center;
 }
+
+
