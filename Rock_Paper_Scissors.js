@@ -71,11 +71,13 @@ btn30.addEventListener('click', function() {game("Scissors");});
 
     let playerSum = 0;
     let compSum = 0;
+    let cs = document.querySelector("#compScore");
+    let ps = document.querySelector("#playerScore");
+    ps.textContent = playerSum;
+    cs.textContent = compSum;
 
     // Need help on this one
     function score(Result) {
-        let cs = document.querySelector("#compScore");
-        let ps = document.querySelector("#playerScore");
         if (Result == "You Win!") {
             playerSum++;
             ps.textContent = playerSum;
