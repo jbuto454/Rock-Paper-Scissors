@@ -23,7 +23,8 @@
     width: 50%; 
     display: flex;
     justify-content: space-evenly;
-    margin-top: 80px;
+    margin-top: 50px;
+    font-family: Chalkduster, fantasy;
 }
 
 .scores2 {
@@ -41,11 +42,12 @@
 }
 
 .container2 {
-    margin-top: 100px;
+    margin-top: 30px;
     height: 33%;
     width: auto;
     display: flex;
     justify-content: center;
+    font-family: Chalkduster, fantasy;
 }
 
 
