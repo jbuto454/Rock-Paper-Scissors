@@ -1,54 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Play Rock Paper Scissors</title>
-  <meta charset="UTF-8"/>
 
-  <link rel='stylesheet' type='text/css' href='Rock_Paper_Scissors.css'>
-</head>
-
-<body>
-
-<h1 class = "head">
-     Play Rock Paper Scissors
-</h1>
-
-<div id = "container20" class = "container2"> 
-</div>
-
-<div class = "container2"> 
-    Make a selection
-</div>
-
-<div class = "container">
-    <div class = "button">
-        <button id = "btn1" type="button">Rock</button>
-    </div>
-
-    <div class = "button">
-     <button id = "btn2" type="button">Paper</button>
-    </div>
-
-    <div class = "button">
-        <button id = "btn3" type="button">Scissors</button>
-    </div>
-</div>
-
-<div class = "scores"> 
-    Computer's Score
-</div>
-
-<div class = "scores"> 
-    Your Score
-</div>
-
-<div id = "compScore" class = "scores2"> 
-</div>
-
-<div id = "playerScore" class = "scores2"> 
-</div>
-
-<script>
 
 const btn10 = document.querySelector("#btn1");
 btn10.addEventListener('click', function() {game("Rock");});
@@ -136,8 +86,4 @@ btn30.addEventListener('click', function() {game("Scissors");});
             return compSum;
         } 
     }
-
-</script>
-</body>
-</html>
 
