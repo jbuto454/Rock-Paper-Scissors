@@ -1,13 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
+  <title>Play Rock Paper Scissors</title>
   <meta charset="UTF-8"/>
-</head>
-<body>
-  <script>
-    
 
+<style>
+
+.head {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    float: left;
+    width: 33%; 
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.scores {
+    float: left;
+    width: 50%; 
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+
+.scores2 {
+    float: left;
+    width: 50%; 
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.container {
+    margin-top: 20px;
+    height: 33%;
+    width: auto;
+}
+
+.container2 {
+    margin-top: 100px;
+    height: 33%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class = "head">
+     Play Rock Paper Scissors
+</h1>
+
+<div id = "container20" class = "container2"> 
+</div>
+
+<div class = "container2"> 
+    Make a selection
+</div>
+
+<div class = "container">
+    <div class = "button">
+        <button id = "btn1" type="button">Rock</button>
+    </div>
+
+    <div class = "button">
+     <button id = "btn2" type="button">Paper</button>
+    </div>
+
+    <div class = "button">
+        <button id = "btn3" type="button">Scissors</button>
+    </div>
+</div>
+
+<div class = "scores"> 
+    Computer's Score
+</div>
+
+<div class = "scores"> 
+    Your Score
+</div>
+
+<div id = "compScore" class = "scores2"> 
+</div>
+
+<div id = "playerScore" class = "scores2"> 
+</div>
+
+<script>
+
+const btn10 = document.querySelector("#btn1");
+btn10.addEventListener('click', function() {game("Rock");});
+
+const btn20 = document.querySelector("#btn2");
+btn20.addEventListener('click', function() {game("Paper");});
+
+const btn30 = document.querySelector("#btn3");
+btn30.addEventListener('click', function() {game("Scissors");});
+    
     //Finds a random number between two values (min and max)
     function Random_number(min, max) {
             return Math.floor((Math.random()) * (max - min + 1) + min);
@@ -56,18 +150,37 @@
             
     }
 
-    // funtion that runs the game 5 times, 
+    // function that runs the game 5 times, 
     //each time the user is asked to imput either rock, paper, or scissors and then the console shows what the computer picked, 
     //what the user picked and who won the game. 
-    function game() {
-        for (i = 0; i < 5; i++) {
-            let playerSelection = prompt("Rock, Paper, or Scissors?");
-            let computerSelection = computerPlay();
-            let Result = playRound(playerSelection, computerSelection);
-            console.log("The computer chose" + " " + computerSelection + " " + "and you chose" + " " + playerSelection.toLowerCase() + " " + Result);
-        }
+    function game(string) {
+        let playerSelection = string;
+        let computerSelection = computerPlay();
+        let Result = playRound(playerSelection, computerSelection);
+        let r = document.querySelector("#container20");
+        r.textContent = "The computer chose" + " " + computerSelection + " " + "and you chose" + " " + playerSelection + " " + ":" + " " + Result;
+        score(Result);
     }
-        
-  </script>
+
+    let playerSum = 0;
+    let compSum = 0;
+
+    // Need help on this one
+    function score(Result) {
+        let cs = document.querySelector("#compScore");
+        let ps = document.querySelector("#playerScore");
+        if (Result == "You Win!") {
+            playerSum++;
+            ps.textContent = playerSum;
+            return playerSum;
+        } else if (Result == "You Lose!") {
+            compSum++;
+            cs.textContent = compSum;
+            return compSum;
+        } 
+    }
+
+</script>
 </body>
 </html>
+
